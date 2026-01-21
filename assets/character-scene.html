@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>3D Character Scene</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      background: #1a1a2e;
+    }
+    #scene-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="scene-container"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r156/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.156.0/examples/js/loaders/GLTFLoader.js"></script>
+
+  <script>
+    let scene, camera, renderer, mixer, clock;
+    let character, walkAction, talkAction;
+    let particles;
+    let isWalking = true;
+    let isAudioPlaying = false;
+
+    const particleCount = 500;
+
+    function init() {
+      // Create scene
+      scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0x1a1a2e, 5, 20);
+
+      // Create camera
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 100);
+      camera.position.set(0, 1.5, 3.5);
+      camera.lookAt(0, 1, 0);
+
+      // Create renderer
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(width, height);
+      renderer.setClearColor(0x1a1a2e, 1);
+      document.getElementById('scene-container').appendChild(renderer.domElement);
+
+      // Add lights
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+      scene.add(ambientLight);
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
+      directionalLight.position.set(2, 3, 3);
+      scene.add(directionalLight);
+
+      const fillLight = new THREE.DirectionalLight(0x8888ff, 0.3);
+      fillLight.position.set(-2, 1, -1);
+      scene.add(fillLight);
+
+      // Create particle system
+      createParticles();
+
+      // Load character and animations
+      loadCharacter();
+
+      // Start animation loop
+      clock = new THREE.Clock();
+      animate();
+
+      // Handle resize
+      window.addEventListener('resize', onWindowResize);
+    }
+
+    function createParticles() {
+      const geometry = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+      const velocities = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 15;
+        positions[i * 3 + 1] = Math.random() * 8;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 15;
+
+        velocities.push(
+          (Math.random() - 0.5) * 0.01,
+          Math.random() * 0.015 + 0.005,
+          (Math.random() - 0.5) * 0.01
+        );
+      }
+
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+      const material = new THREE.PointsMaterial({
+        color: 0x6666aa,
+        size: 0.15,
+        transparent: true,
+        opacity: 0.6,
+        blending: THREE.AdditiveBlending,
+        sizeAttenuation: true
+      });
+
+      particles = new THREE.Points(geometry, material);
+      particles.userData.velocities = velocities;
+      scene.add(particles);
+    }
+
+    function loadCharacter() {
+      const loader = new THREE.GLTFLoader();
+
+      // Character model URL - will be replaced by React Native
+      const characterUrl = 'CHARACTER_MODEL_URL';
+      const walkUrl = 'WALK_ANIMATION_URL';
+      const talkUrl = 'TALK_ANIMATION_URL';
+
+      // Load character
+      loader.load(characterUrl, (gltf) => {
+        character = gltf.scene;
+        character.position.set(-4, 0, 0);
+        character.rotation.y = Math.PI / 2;
+        scene.add(character);
+
+        mixer = new THREE.AnimationMixer(character);
+
+        // Load walk animation
+        loader.load(walkUrl, (walkGltf) => {
+          if (walkGltf.animations && walkGltf.animations.length > 0) {
+            walkAction = mixer.clipAction(walkGltf.animations[0]);
+            walkAction.play();
+          }
+        });
+
+        // Load talk animation
+        loader.load(talkUrl, (talkGltf) => {
+          if (talkGltf.animations && talkGltf.animations.length > 0) {
+            talkAction = mixer.clipAction(talkGltf.animations[0]);
+          }
+        });
+      });
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      const delta = clock.getDelta();
+
+      // Update animation mixer
+      if (mixer) {
+        mixer.update(delta);
+      }
+
+      // Move character
+      if (character && isWalking && character.position.x < 0) {
+        character.position.x += delta * 1.2;
+
+        if (character.position.x >= 0) {
+          character.position.x = 0;
+          isWalking = false;
+
+          // Notify React Native that walk is complete
+          if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'walkComplete' }));
+          }
+        }
+      }
+
+      // Switch to talk animation when audio plays
+      if (isAudioPlaying && !isWalking && walkAction && talkAction) {
+        walkAction.fadeOut(0.3);
+        talkAction.fadeIn(0.3);
+        isAudioPlaying = false; // Only switch once
+      }
+
+      // Animate particles
+      if (particles) {
+        const positions = particles.geometry.attributes.position.array;
+        const velocities = particles.userData.velocities;
+
+        for (let i = 0; i < particleCount; i++) {
+          positions[i * 3] += velocities[i * 3];
+          positions[i * 3 + 1] += velocities[i * 3 + 1];
+          positions[i * 3 + 2] += velocities[i * 3 + 2];
+
+          // Reset particles that go too high
+          if (positions[i * 3 + 1] > 8) {
+            positions[i * 3 + 1] = 0;
+          }
+        }
+
+        particles.geometry.attributes.position.needsUpdate = true;
+      }
+
+      renderer.render(scene, camera);
+    }
+
+    function onWindowResize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+
+      renderer.setSize(width, height);
+    }
+
+    // Listen for messages from React Native
+    window.addEventListener('message', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.type === 'audioPlaying') {
+          isAudioPlaying = data.value;
+        }
+      } catch (e) {
+        // Ignore parse errors
+      }
+    });
+
+    // For Android
+    document.addEventListener('message', (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        if (data.type === 'audioPlaying') {
+          isAudioPlaying = data.value;
+        }
+      } catch (e) {
+        // Ignore parse errors
+      }
+    });
+
+    // Initialize scene
+    init();
+  </script>
+</body>
+</html>
