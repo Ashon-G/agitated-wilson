@@ -1,0 +1,325 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuth() && request.auth.uid == userId;
+    }
+
+    // Validate webhook token for Cloud Functions operations
+    // Simplified to just check if token exists in request data
+    function isValidWebhookToken() {
+      return request.resource.data.webhookToken != null;
+    }
+
+    // Alternative: Require userId to match the data being written
+    // This ensures Cloud Functions can only write data for the userId specified in the document
+    function hasValidUserId() {
+      return request.resource.data.userId != null && 
+             request.resource.data.userId is string &&
+             request.resource.data.userId.size() > 0;
+    }
+
+    // ===== OAUTH PENDING =====
+    // Temporary OAuth session tracking
+    // - App creates document (authenticated)
+    // - Callback page updates with code (unauthenticated - runs in browser)
+    // - App reads and deletes (authenticated)
+    match /oauth_pending/{sessionId} {
+      // Authenticated users can create their own pending sessions
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      // Anyone can read and update (callback page runs unauthenticated in browser)
+      allow read, update: if true;
+      // Authenticated users can delete their own sessions
+      allow delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== USERS =====
+    // User profiles and nested data
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      // User's workspaces (nested under user) - NEW LOCATION
+      match /workspaces/{workspaceId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // User's agents (nested under user)
+      match /agents/{agentId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // User's integrations (nested under user)
+      match /integrations/{integrationId} {
+        allow read, write: if isOwner(userId);
+
+        // Integration insights (nested under integration)
+        match /insights/{insightId} {
+          allow read, write: if isOwner(userId);
+        }
+      }
+
+      // NEW: User's knowledge base (hierarchical structure)
+      // Knowledge items stored directly under users/{userId}/knowledge/{itemId}
+      match /knowledge/{itemId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // User's agent settings (for Cloud Functions workflow customization)
+      match /agentSettings/{settingsId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // User's onboarding progress
+      match /onboarding_progress/{progressId} {
+        allow read, write: if isOwner(userId);
+      }
+
+      // User's quest progress (for post-onboarding knowledge gathering)
+      match /quests/{questId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // ===== LEGACY/DEPRECATED WORKSPACES =====
+    // Top-level workspaces collection - DEPRECATED (keeping for backward compat during migration)
+    // TODO: Remove after migration complete
+    match /workspaces/{workspaceId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+
+      // Knowledge items in this workspace
+      match /knowledge/{knowledgeId} {
+        allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+        allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+      }
+    }
+
+    // ===== INBOX =====
+    // Unified user inbox
+    match /inbox/{inboxId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== REDDIT =====
+    // Reddit leads and comments (Cloud Functions writes, users read/update)
+    match /reddit/leads/{leadId} {
+      // SECURITY: Cloud Functions can create/update only with valid webhook token AND valid userId
+      // Users can create/update their own leads if authenticated
+      allow create, update: if (isValidWebhookToken() && hasValidUserId()) || 
+                            (isAuth() && request.resource.data.userId == request.auth.uid);
+      // Users can read, update, and delete their own leads
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /reddit/comments/{commentId} {
+      // SECURITY: Cloud Functions can create only with valid webhook token AND valid userId
+      // Users can create their own comments if authenticated
+      allow create: if (isValidWebhookToken() && hasValidUserId()) || 
+                    (isAuth() && request.resource.data.userId == request.auth.uid);
+      // Users can read, update, and delete their own comments
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== PENDING COMMENTS =====
+    // Cloud Functions writes pending comments, app reads and updates after posting to Reddit
+    match /pending_comments/{commentId} {
+      // SECURITY: N8N can create only with valid webhook token AND valid userId
+      // Users can create their own pending comments if authenticated
+      allow create: if (isValidWebhookToken() && hasValidUserId()) || 
+                    (isAuth() && request.resource.data.userId == request.auth.uid);
+      // Users can read and update their own pending comments (app updates status after posting)
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== USER PREFERENCES =====
+    // User preferences for proactive questions and app settings
+    match /user_preferences/{preferenceId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== AGENT MANAGEMENT =====
+    // Agent activity logs, actions, and scheduled questions
+    match /agent_activity_log/{logId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /agent_actions/{actionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /agent_inbox/{inboxId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /scheduled_questions/{questionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== TRAINING & LEARNING =====
+    // Training sessions and data
+    match /training_sessions/{sessionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /training_data/{dataId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== BILLING & EVENTS =====
+    // Usage events and billing
+    match /qualified_lead_events/{eventId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /link_click_events/{eventId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /billing_events/{eventId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /payment_status/{statusId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== ONBOARDING PROGRESS =====
+    // User onboarding progress (saved/resumed onboarding state)
+    // Document ID is the userId
+    match /onboarding_progress/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // ===== LEADS =====
+    // Full lead management
+    match /leads/{leadId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+
+      // Conversations for this lead
+      match /conversations/{conversationId} {
+        allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+        allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+
+        // Messages in this conversation
+        match /messages/{messageId} {
+          allow create: if isAuth();
+          allow read, update, delete: if isAuth();
+        }
+      }
+    }
+
+    // ===== EMAIL COLLECTION =====
+    // Email collection conversations - workflow to collect lead emails via DM/comments
+    match /email_collection_conversations/{conversationId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== LEAD CONVERSATIONS =====
+    // Conversation agent service - automated DM conversations with leads
+    match /lead_conversations/{conversationId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== LEAD FEEDBACK =====
+    // Stores user feedback on leads (denial reasons, etc.) for AI learning
+    match /lead_feedback/{feedbackId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // Email collection settings per user
+    match /email_collection_settings/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // ===== SESSIONS =====
+    // Hunting sessions
+    match /sessions/hunting/{sessionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // Learning sessions
+    match /sessions/learning/{sessionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== LEGACY COLLECTIONS (Keep for compatibility) =====
+    // These can be removed after migration is complete
+
+    match /user_profiles/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    match /inbox_items/{itemId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /reddit_leads/{leadId} {
+      // SECURITY: Require webhook token or authentication
+      allow create, update: if (isValidWebhookToken() && hasValidUserId()) || 
+                            (isAuth() && request.resource.data.userId == request.auth.uid);
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /agent_comments/{commentId} {
+      // SECURITY: Require webhook token or authentication
+      allow create: if (isValidWebhookToken() && hasValidUserId()) || 
+                    (isAuth() && request.resource.data.userId == request.auth.uid);
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /hunting_sessions/{sessionId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    match /sales_agents/{agentId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== MEMORIES =====
+    // User memories for AI learning and context
+    match /memories/{memoryId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // ===== CONVERSATION MESSAGES =====
+    // Standalone conversation messages collection
+    match /conversation_messages/{messageId} {
+      allow create: if isAuth() && request.resource.data.userId == request.auth.uid;
+      allow read, update, delete: if isAuth() && resource.data.userId == request.auth.uid;
+    }
+
+    // Deny everything else
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "Tava: AI Sales Team",
+    "slug": "tava-automated-ai-digital-sales-force",
+    "scheme": "tava",
+    "version": "3.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.vashon.vatas",
+      "associatedDomains": [
+        "applinks:auth.expo.io"
+      ],
+      "infoPlist": {
+        "NSCameraUsageDescription": "Tava: AI Sales Team uses the camera to capture photos inside the app before you publish them.",
+        "NSPhotoLibraryUsageDescription": "Tava: AI Sales Team accesses your photo library to let you choose media that appears in the app.",
+        "NSMicrophoneUsageDescription": "Tava: AI Sales Team uses the microphone to record audio tracks that the app attaches to your creations.",
+        "UIBackgroundModes": [
+          "remote-notification",
+          "fetch",
+          "remote-notification",
+          "fetch"
+        ],
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "tava"
+            ]
+          },
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.904315710289-puq7a4eci3ajkda9s0k1keej8omuj7ug"
+            ]
+          }
+        ]
+      },
+      "buildNumber": "6"
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "package": "com.tava.app",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "tava"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "icon": "./icon.png",
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 25
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./icon.png",
+          "color": "#FF4500",
+          "sounds": [],
+          "mode": "production"
+        }
+      ],
+      "@logrocket/react-native"
+    ],
+    "owner": ""
+  }
+}

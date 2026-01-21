@@ -1,0 +1,120 @@
++ exec gosu vibecode node node_modules/.bin/expo start --localhost
+env: load .env
+env: export EXPO_PUBLIC_VIBECODE_GROK_API_KEY EXPO_PUBLIC_GOOGLE_CLIENT_ID EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY EXPO_PUBLIC_ENVIRONMENT EXPO_PUBLIC_VIBECODE_GOOGLE_API_KEY EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET EXPO_PUBLIC_GEMINI_API_KEY EXPO_PUBLIC_BOX_CLIENT_ID EXPO_PUBLIC_VIBECODE_REVENUECAT_APPLE_KEY EXPO_PUBLIC_USE_FIREBASE_EMULATOR EXPO_PUBLIC_VIBECODE_REVENUECAT_GOOGLE_KEY EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN EXPO_PUBLIC_FIREBASE_APP_ID EXPO_PUBLIC_FIREBASE_PROJECT_ID EXPO_PUBLIC_HUBSPOT_CLIENT_SECRET EXPO_PUBLIC_FIREBASE_DATABASE_URL EXPO_PUBLIC_FIREBASE_EMULATOR_HOST EXPO_PUBLIC_VIBECODE_ELEVENLABS_API_KEY EXPO_PUBLIC_BOX_CLIENT_SECRET EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID EXPO_PUBLIC_REDDIT_CLIENT_ID EXPO_PUBLIC_VIBECODE_ANTHROPIC_API_KEY EXPO_PUBLIC_ENABLE_AUTH_PERSISTENCE EXPO_PUBLIC_VIBECODE_OPENAI_API_KEY EXPO_PUBLIC_HUBSPOT_CLIENT_ID EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID EXPO_PUBLIC_FIREBASE_API_KEY EXPO_PUBLIC_VIBECODE_REVENUECAT_TEST_KEY EXPO_PUBLIC_AUTH_TOKEN_REFRESH_THRESHOLD EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+Starting project at /home/user/workspace
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+iOS ./index.ts ░░░░░░░░░░░░░░░░  0.0% (0/1)
+ WARN  Attempted to import the module "/home/user/workspace/node_modules/@firebase/auth/dist/rn/index.js" which is not listed in the "exports" of "/home/user/workspace/node_modules/@firebase/auth" under the requested subpath "./dist/rn/index.js". Falling back to file-based resolution. Consider updating the call site or asking the package maintainer(s) to expose this API.
+iOS ./index.ts ▓▓▓▓▓▓▓░░░░░░░░░ 48.4% ( 824/2839)
+ WARN  Attempted to import the module "/home/user/workspace/node_modules/@anthropic-ai/sdk/error" which is listed in the "exports" of "/home/user/workspace/node_modules/@anthropic-ai/sdk", however no match was resolved for this request (platform = ios). Falling back to file-based resolution. Consider updating the call site or asking the package maintainer(s) to expose this API.
+ WARN  Attempted to import the module "/home/user/workspace/node_modules/@anthropic-ai/sdk/streaming" which is listed in the "exports" of "/home/user/workspace/node_modules/@anthropic-ai/sdk", however no match was resolved for this request (platform = ios). Falling back to file-based resolution. Consider updating the call site or asking the package maintainer(s) to expose this API.
+iOS Bundled 6246ms index.ts (3732 modules)
+iOS Bundled 1303ms index.ts (3729 modules)
+ LOG  ✅ Firebase Auth initialized with AsyncStorage persistence
+ LOG  🔗 HubSpot OAuth redirect URI: https://heyvata.com/oauth/hubspot/callback.html
+ LOG  🚀 App.tsx starting...
+ LOG  ⏳ Initializing app...
+ LOG  🔧 Initializing LogRocket...
+ WARN  @logrocket/react-native native module is missing. Please review installation instructions.
+ LOG  ✅ LogRocket initialized
+ LOG  
+ LOG  🔧 Google OAuth Status:
+ LOG     iOS Client ID: ✅ Configured
+ LOG     Android Client ID: ❌ Missing
+ LOG  
+ LOG  ✅ App initialized
+ LOG  🚀 App.tsx starting...
+ LOG  ✅ App ready, rendering...
+ LOG  ✅ AgentInboxService initialized
+ LOG  ✅ Backend service initialized successfully
+ LOG  ✅ Backend service initialized successfully
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": false, "minimumLoadTime": true}
+ LOG  ✅ DataMigrationService initialized
+ LOG  ✅ SecurityValidationService initialized
+ LOG  ✅ OfflineService initialized
+ LOG  🔄 RootNavigator: Initializing auth...
+ LOG  🔄 Auth store: Initializing...
+ LOG  🔄 Auth store: Auth state changed {"error": null, "hasUser": true, "isAuthenticated": true, "isLoading": false}
+ LOG  🔍 Loading user profile for: Ws8riaWW3LbbqJHxg9CITeTCek22
+ LOG  ⏱️ RootNavigator: Starting minimum load timer...
+ LOG  📊 RootNavigator: Auth state - {"isAuthenticated": false, "isLoading": false, "isOnboardingComplete": false, "workspacesLoading": false}
+ LOG  ✅ RootNavigator: Ready to show auth
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  📊 RootNavigator: Auth state - {"isAuthenticated": true, "isLoading": false, "isOnboardingComplete": false, "workspacesLoading": false}
+ LOG  ✅ RootNavigator: Ready to show onboarding
+ LOG  Network status changed: Online
+ LOG  Network status changed: Online
+ LOG  Network status changed: Online
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  Network status changed: Online
+ LOG  📄 User profile loaded: exists
+ LOG  ✅ Onboarding complete - showing main app
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  ✅ Backend service initialized successfully
+ LOG  📊 RootNavigator: Auth state - {"isAuthenticated": true, "isLoading": false, "isOnboardingComplete": true, "workspacesLoading": false}
+ LOG  ✅ RootNavigator: Ready to show app
+ LOG  🔄 RootNavigator: Loading workspaces and profile...
+ LOG  🔄 loadWorkspaces: Starting to load workspaces for user: Ws8riaWW3LbbqJHxg9CITeTCek22
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  📊 RootNavigator: Auth state - {"isAuthenticated": true, "isLoading": false, "isOnboardingComplete": true, "workspacesLoading": true}
+ LOG  ⏳ RootNavigator: Waiting for workspaces...
+ LOG  ℹ️ Agent initialization skipped - agent will be created after Reddit connection
+ LOG  Data migration analysis disabled - all data should be stored in Firebase
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": false, "minimumLoadTime": true}
+ LOG  📦 loadWorkspaces: Loaded workspaces: 22 workspaces
+ LOG  📋 loadWorkspaces: Workspace IDs: ["4MsC7uQ3H2886fszDYDb", "4vCGgZztx1HmkhqWOGvu", "AhGftidKaBYKqgqXPggD", "EAEcqkLYbQpsQ396EEJh", "HKGwfkgKNO1d8fZQXkoC", "PHiMNvuksE1qDq44OT6a", "SclHAsAxJgq2cpPK283T", "TkMhOngT0aJ4yUsPWGVT", "Z3DaneZvU5thHe4sl2Cu", "bxwDPOpi96P6xIntU8sA", "dKhfzrwtXoZjC9wDhHNv", "hE2n6YeGQWO4N5gXvqk5", "hoAf1wKE1ccfsSs4YTMG", "kxfLt8KbLTEqyPpJCNTq", "lerwUiUDhkpl3KwGTYl1", "mBzLAc39arfY9vPioUWb", "nJQQgBOwqoLwRwITBH2y", "oUekfz9Ji69PVkWTGLaI", "qzhynIuyC7s0sKEC3qxn", "rlZV2KGLb3l3c4hQgRiG", "rzZSqbuApPZO9erDw4s2", "zDwvs81KiEj1kxa8okVY"]
+ LOG  🔍 loadWorkspaces: Current state after load: {"currentWorkspaceId": null, "hasCurrentWorkspace": false, "workspacesCount": 22}
+ LOG  ✅ loadWorkspaces: Setting default workspace: 4MsC7uQ3H2886fszDYDb
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": false, "minimumLoadTime": true}
+ LOG  📊 RootNavigator: Auth state - {"isAuthenticated": true, "isLoading": false, "isOnboardingComplete": true, "workspacesLoading": false}
+ LOG  ✅ RootNavigator: Ready to show app
+ LOG  Received 0 inbox updates
+ LOG  🟢 [RedditOAuth] Tokens restored from Firestore for user: Firm-Lingonberry-748
+ LOG  ✅ Reddit connection restored from Firestore
+ LOG  🚀 [BackendInit] Starting hunting engine...
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": false, "minimumLoadTime": true}
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  🔄 Loading agent settings for user: Ws8riaWW3LbbqJHxg9CITeTCek22
+ LOG  ✅ Loaded existing agent settings
+ LOG  🎯 [BackendInit] Using agent settings from wizard: {"commentStyle": "friendly", "postAgeLimitDays": 30, "requireApproval": true, "scoreThreshold": 8}
+ LOG  [RevenueCat] SDK initialized successfully
+ LOG  ✅ [HuntingEngine] Resumed existing session: 2aGD1UEOt1UdShabsW6i
+ LOG  🎯 [BackendInit] Starting hunt across 3 subreddits: entrepreneur, smallbusiness, startups
+ LOG  ✅ [BackendInit] Hunting engine started successfully
+ LOG  ⏳ RootNavigator: Showing loader - {"isReady": true, "minimumLoadTime": true}
+ LOG  ⚠️ [Notifications] No EAS project ID configured, using native device token
+ LOG  ✅ RootNavigator: Minimum load time complete
+ LOG  🏠 RootNavigator: Rendering AppNavigator {"isAuthenticated": true, "isLoading": false, "isOnboardingComplete": true}
+ LOG  📥 [InboxStore] Loading inbox items for workspace: 4MsC7uQ3H2886fszDYDb pageSize: 20
+ LOG  🔍 Checking for agent... {"hasAssignedAgentId": true, "hasAttemptedRedirect": false}
+ LOG  🎭 Agent ID loaded from assigned personality: vashon
+ LOG  🏠 Home screen focused - loading agent
+ LOG  🎨 HomeScreen using workspace color: #10B981
+ LOG  🎨 Agent3D received workspaceColor: #10B981
+ LOG  Using personality agent: Vashon Gender: male
+ LOG  Agent3D greeting effect: {"accepted": true, "hasPlayedGreeting": false}
+ LOG  Starting avatar greeting...
+ LOG  playGreeting called - ElevenLabs disabled, completing immediately
+ LOG  [HomeScreen] Greeting complete - enabling dashboard speech
+ LOG  ✅ [Notifications] Navigation ref set
+ LOG  🎨 HomeScreen using workspace color: #10B981
+ LOG  🎨 Agent3D received workspaceColor: #10B981
+ LOG  Agent3D greeting effect: {"accepted": true, "hasPlayedGreeting": true}
+ LOG  ⏸️ [HuntingEngine] 3 pending leads need approval - waiting
+ LOG  📥 [InboxStore] Loaded 7 items from Firestore inbox collection, hasMore: false
+ LOG  🎨 HomeScreen using workspace color: #10B981
+ LOG  🎨 Agent3D received workspaceColor: #10B981
+ LOG  📊 [HuntingProgress] waiting_approval: Review 3 leads in your inbox to continue hunting (0%)
+ LOG  ✅ [HuntingEngine] Monitoring started (hunting every 30 minutes)
+ LOG  [QuestStore] Loaded 11 quests, 7 completed
+ LOG  🎨 HomeScreen using workspace color: #10B981
+ LOG  WebView message: Starting initialization
+ LOG  WebView message: Scene ready
+ LOG  WebView loaded
+ LOG  WebView message: Agent loaded
+ LOG  🎨 Agent3D received workspaceColor: #10B981
+ LOG  WebView message: Animation loaded
+ LOG  🟢 [RedditOAuth] Tokens restored from Firestore for user: Firm-Lingonberry-748
+ LOG  🟢 [RedditOAuth] Tokens restored from Firestore for user: Firm-Lingonberry-748
