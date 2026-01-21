@@ -1,0 +1,699 @@
+
+/home/user/workspace/functions/src/aiCommentGenerator.ts
+    6:13  error    'admin' is defined but never used         no-unused-vars
+    6:13  error    'admin' is defined but never used         @typescript-eslint/no-unused-vars
+    7:13  error    'functions' is defined but never used     no-unused-vars
+    7:13  error    'functions' is defined but never used     @typescript-eslint/no-unused-vars
+   18:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   19:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   39:1   error    Trailing spaces not allowed               no-trailing-spaces
+   42:1   error    Trailing spaces not allowed               no-trailing-spaces
+   45:1   error    Trailing spaces not allowed               no-trailing-spaces
+   49:46  error    Missing trailing comma                    comma-dangle
+   52:1   error    Trailing spaces not allowed               no-trailing-spaces
+   54:62  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   55:1   error    Trailing spaces not allowed               no-trailing-spaces
+   60:63  error    Missing trailing comma                    comma-dangle
+   61:9   error    Block must not be padded by blank lines   padded-blocks
+   62:1   error    Trailing spaces not allowed               no-trailing-spaces
+   64:7   warning  Unexpected console statement              no-console
+   67:72  error    Missing trailing comma                    comma-dangle
+   71:1   error    Trailing spaces not allowed               no-trailing-spaces
+   75:29  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   75:52  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   77:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   79:1   error    Trailing spaces not allowed               no-trailing-spaces
+  103:1   error    Trailing spaces not allowed               no-trailing-spaces
+  110:1   error    Trailing spaces not allowed               no-trailing-spaces
+  116:27  error    Missing trailing comma                    comma-dangle
+  117:15  error    Missing trailing comma                    comma-dangle
+  122:22  error    Missing trailing comma                    comma-dangle
+  123:12  error    Missing trailing comma                    comma-dangle
+  127:47  error    Missing trailing comma                    comma-dangle
+  128:12  error    Missing trailing comma                    comma-dangle
+  129:10  error    Missing trailing comma                    comma-dangle
+  131:1   error    Trailing spaces not allowed               no-trailing-spaces
+  133:1   error    Trailing spaces not allowed               no-trailing-spaces
+  135:9   warning  Unexpected console statement              no-console
+  138:1   error    Trailing spaces not allowed               no-trailing-spaces
+  140:35  error    Block must not be padded by blank lines   padded-blocks
+  141:1   error    Trailing spaces not allowed               no-trailing-spaces
+  143:7   warning  Unexpected console statement              no-console
+  147:1   error    Trailing spaces not allowed               no-trailing-spaces
+  151:49  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  155:1   error    Trailing spaces not allowed               no-trailing-spaces
+  159:1   error    Trailing spaces not allowed               no-trailing-spaces
+  162:1   error    Trailing spaces not allowed               no-trailing-spaces
+  169:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  169:28  error    Missing trailing comma                    comma-dangle
+  181:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  193:1   error    Trailing spaces not allowed               no-trailing-spaces
+  195:1   error    Trailing spaces not allowed               no-trailing-spaces
+  199:48  error    Missing trailing comma                    comma-dangle
+  202:1   error    Trailing spaces not allowed               no-trailing-spaces
+  206:57  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  207:24  error    Missing trailing comma                    comma-dangle
+  208:9   error    Block must not be padded by blank lines   padded-blocks
+  209:1   error    Trailing spaces not allowed               no-trailing-spaces
+  211:7   warning  Unexpected console statement              no-console
+  214:72  error    Missing trailing comma                    comma-dangle
+
+/home/user/workspace/functions/src/aiProxy.ts
+   20:21  error    Missing trailing comma        comma-dangle
+   34:37  error    Missing trailing comma        comma-dangle
+   59:38  error    Missing trailing comma        comma-dangle
+   64:23  error    Missing trailing comma        comma-dangle
+   67:5   warning  Unexpected console statement  no-console
+   91:38  error    Missing trailing comma        comma-dangle
+   96:23  error    Missing trailing comma        comma-dangle
+   99:5   warning  Unexpected console statement  no-console
+  123:18  error    Missing trailing comma        comma-dangle
+  129:30  error    Missing trailing comma        comma-dangle
+  132:5   warning  Unexpected console statement  no-console
+
+/home/user/workspace/functions/src/autonomousAgentOrchestrator.ts
+   14:3   error    'REDDIT_HUNTER' is defined but never used         no-unused-vars
+   15:3   error    'REPLY_RESPONDER' is defined but never used       no-unused-vars
+   16:3   error    'KNOWLEDGE_ANALYZER' is defined but never used    no-unused-vars
+   17:3   error    'CONTENT_GENERATOR' is defined but never used     no-unused-vars
+   18:3   error    'NOTIFICATION_MANAGER' is defined but never used  no-unused-vars
+   19:3   error    'CUSTOM' is defined but never used                no-unused-vars
+   23:3   error    'IDLE' is defined but never used                  no-unused-vars
+   24:3   error    'ACTIVE' is defined but never used                no-unused-vars
+   25:3   error    'PAUSED' is defined but never used                no-unused-vars
+   26:3   error    'ERROR' is defined but never used                 no-unused-vars
+   27:3   error    'DISABLED' is defined but never used              no-unused-vars
+   52:15  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+   53:20  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+   73:20  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+   88:42  error    Block must not be padded by blank lines           padded-blocks
+  101:34  error    Missing trailing comma                            comma-dangle
+  102:8   error    Missing trailing comma                            comma-dangle
+  106:5   warning  Unexpected console statement                      no-console
+  126:20  error    Missing trailing comma                            comma-dangle
+  135:5   warning  Unexpected console statement                      no-console
+  138:5   warning  Unexpected console statement                      no-console
+  142:5   warning  Unexpected console statement                      no-console
+  146:80  error    Missing trailing comma                            comma-dangle
+  151:46  error    Missing trailing comma                            comma-dangle
+  154:5   warning  Unexpected console statement                      no-console
+  158:24  error    Missing trailing comma                            comma-dangle
+  165:49  error    Missing trailing comma                            comma-dangle
+  174:23  error    Missing trailing comma                            comma-dangle
+  176:61  warning  Forbidden non-null assertion                      @typescript-eslint/no-non-null-assertion
+  179:7   warning  Unexpected console statement                      no-console
+  183:9   warning  Unexpected console statement                      no-console
+  194:9   warning  Unexpected console statement                      no-console
+  208:35  error    Missing trailing comma                            comma-dangle
+  210:37  error    Missing trailing comma                            comma-dangle
+  213:7   warning  Unexpected console statement                      no-console
+  218:73  error    Missing trailing comma                            comma-dangle
+  219:10  error    Block must not be padded by blank lines           padded-blocks
+  222:7   warning  Unexpected console statement                      no-console
+  227:74  error    Missing trailing comma                            comma-dangle
+  278:7   warning  Unexpected console statement                      no-console
+  293:28  error    Expected { after 'if' condition                   curly
+  294:9   error    Unexpected lexical declaration in case block      no-case-declarations
+  307:9   error    Unexpected lexical declaration in case block      no-case-declarations
+  324:24  error    Missing trailing comma                            comma-dangle
+  342:23  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  344:54  error    Missing trailing comma                            comma-dangle
+  355:5   warning  Unexpected console statement                      no-console
+  364:21  error    Missing trailing comma                            comma-dangle
+  366:5   warning  Unexpected console statement                      no-console
+  375:20  error    Missing trailing comma                            comma-dangle
+  377:5   warning  Unexpected console statement                      no-console
+  386:21  error    Missing trailing comma                            comma-dangle
+  388:5   warning  Unexpected console statement                      no-console
+  407:16  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  409:19  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  419:20  error    Missing trailing comma                            comma-dangle
+  439:40  error    Missing trailing comma                            comma-dangle
+  446:19  error    Missing trailing comma                            comma-dangle
+  454:5   warning  Unexpected console statement                      no-console
+  462:31  warning  Forbidden non-null assertion                      @typescript-eslint/no-non-null-assertion
+  463:9   warning  Unexpected console statement                      no-console
+  475:11  warning  Unexpected console statement                      no-console
+
+/home/user/workspace/functions/src/autonomousRedditAgent.ts
+   36:46  error    'event' is defined but never used                                        no-unused-vars
+   36:46  error    'event' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+   36:53  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+   37:3   warning  Unexpected console statement                                             no-console
+   39:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   45:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   46:5   warning  Unexpected console statement                                             no-console
+   47:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   52:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   56:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   59:11  warning  Unexpected console statement                                             no-console
+   62:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   67:13  warning  Unexpected console statement                                             no-console
+   71:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   78:13  warning  Unexpected console statement                                             no-console
+   82:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   84:9   warning  Unexpected console statement                                             no-console
+   87:21  error    Missing trailing comma                                                   comma-dangle
+   89:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   96:40  error    Missing trailing comma                                                   comma-dangle
+   98:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  103:25  error    Missing trailing comma                                                   comma-dangle
+  106:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  108:9   error    Missing trailing comma                                                   comma-dangle
+  110:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  115:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  116:5   warning  Unexpected console statement                                             no-console
+  117:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  125:27  error    Missing trailing comma                                                   comma-dangle
+  127:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  130:5   warning  Unexpected console statement                                             no-console
+  131:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  136:70  error    Missing trailing comma                                                   comma-dangle
+  138:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+
+/home/user/workspace/functions/src/dialogflowCXManager.ts
+   37:7   warning  Unexpected console statement              no-console
+   38:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   39:7   warning  Unexpected console statement              no-console
+   57:14  error    'FirebaseFirestore' is not defined        no-undef
+   58:14  error    'FirebaseFirestore' is not defined        no-undef
+   62:24  error    'FirebaseFirestore' is not defined        no-undef
+   71:15  error    'FirebaseFirestore' is not defined        no-undef
+  100:28  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  101:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  102:22  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  105:5   warning  Unexpected console statement              no-console
+  106:5   warning  Unexpected console statement              no-console
+  107:5   warning  Unexpected console statement              no-console
+  114:61  error    Missing trailing comma                    comma-dangle
+  127:7   warning  Unexpected console statement              no-console
+  154:7   warning  Unexpected console statement              no-console
+  189:7   warning  Unexpected console statement              no-console
+  201:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  202:7   warning  Unexpected console statement              no-console
+  249:9   warning  Unexpected console statement              no-console
+  252:41  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  254:4   error    Missing trailing comma                    comma-dangle
+  295:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  296:7   warning  Unexpected console statement              no-console
+  299:4   error    Missing trailing comma                    comma-dangle
+  335:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  336:7   warning  Unexpected console statement              no-console
+  339:4   error    Missing trailing comma                    comma-dangle
+  382:7   warning  Unexpected console statement              no-console
+  388:21  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  389:7   warning  Unexpected console statement              no-console
+  392:4   error    Missing trailing comma                    comma-dangle
+
+/home/user/workspace/functions/src/dialogflowCXSession.ts
+   16:7   error    'PROJECT_ID' is assigned a value but never used  no-unused-vars
+   16:7   error    'PROJECT_ID' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   17:7   error    'LOCATION' is assigned a value but never used    no-unused-vars
+   17:7   error    'LOCATION' is assigned a value but never used    @typescript-eslint/no-unused-vars
+   37:7   warning  Unexpected console statement                     no-console
+   38:21  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   39:7   warning  Unexpected console statement                     no-console
+   71:24  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   72:16  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   73:25  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   86:5   warning  Unexpected console statement                     no-console
+   87:5   warning  Unexpected console statement                     no-console
+   88:5   warning  Unexpected console statement                     no-console
+  113:7   warning  Unexpected console statement                     no-console
+  116:26  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  149:7   warning  Unexpected console statement                     no-console
+  149:19  error    Strings must use singlequote                     quotes
+  152:13  error    Use object destructuring                         prefer-destructuring
+  262:21  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  263:7   warning  Unexpected console statement                     no-console
+  292:41  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  294:4   error    Missing trailing comma                           comma-dangle
+  304:17  error    Async arrow function has no 'await' expression   require-await
+  315:5   warning  Unexpected console statement                     no-console
+  323:4   error    Missing trailing comma                           comma-dangle
+
+/home/user/workspace/functions/src/index.ts
+   90:17  error    'context' is defined but never used                                        no-unused-vars
+   90:17  error    'context' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+   92:5   warning  Unexpected console statement                                               no-console
+   94:5   warning  Unexpected console statement                                               no-console
+  106:17  error    'context' is defined but never used                                        no-unused-vars
+  106:17  error    'context' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  108:5   warning  Unexpected console statement                                               no-console
+  110:5   warning  Unexpected console statement                                               no-console
+
+/home/user/workspace/functions/src/knowledgeBaseQuery.ts
+   25:22  error    Missing trailing comma                                        comma-dangle
+   34:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   36:9   warning  Unexpected console statement                                  no-console
+   39:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   42:22  error    Missing trailing comma                                        comma-dangle
+   44:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   49:18  error    Missing trailing comma                                        comma-dangle
+   51:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   55:22  error    Block must not be padded by blank lines                       padded-blocks
+   56:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   58:7   warning  Unexpected console statement                                  no-console
+   62:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   66:3   error    Async method 'scoreKnowledgeItems' has no 'await' expression  require-await
+   69:22  error    Missing trailing comma                                        comma-dangle
+   73:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   76:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   81:62  error    Missing trailing comma                                        comma-dangle
+   83:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   89:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   94:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+   99:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  102:30  error    Missing trailing comma                                        comma-dangle
+  106:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  117:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  120:22  error    Missing trailing comma                                        comma-dangle
+  121:28  error    Block must not be padded by blank lines                       padded-blocks
+  122:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  124:7   warning  Unexpected console statement                                  no-console
+  128:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  134:21  error    Missing trailing comma                                        comma-dangle
+  143:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  146:22  error    Missing trailing comma                                        comma-dangle
+  147:28  error    Block must not be padded by blank lines                       padded-blocks
+  148:1   error    Trailing spaces not allowed                                   no-trailing-spaces
+  150:7   warning  Unexpected console statement                                  no-console
+
+/home/user/workspace/functions/src/knowledgeGapDetector.ts
+   19:23  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+   29:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   36:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   41:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   45:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   49:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   57:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   65:9   warning  Unexpected console statement                         no-console
+   68:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   69:7   warning  Unexpected console statement                         no-console
+   70:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   77:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   83:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   86:67  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+   87:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   90:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   91:64  error    Missing trailing comma                               comma-dangle
+   93:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   96:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   97:7   warning  Unexpected console statement                         no-console
+   98:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  101:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  102:19  error    Block must not be padded by blank lines              padded-blocks
+  103:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  105:7   warning  Unexpected console statement                         no-console
+  109:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  117:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  121:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  124:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  129:27  error    Expected { after 'if' condition                      curly
+  130:27  error    Expected { after 'if' condition                      curly
+  133:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  141:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  143:16  error    Strings must use singlequote                         quotes
+  149:39  error    Missing trailing comma                               comma-dangle
+  150:10  error    Missing trailing comma                               comma-dangle
+  152:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  157:39  error    Missing trailing comma                               comma-dangle
+  158:10  error    Block must not be padded by blank lines              padded-blocks
+  159:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  161:7   warning  Unexpected console statement                         no-console
+  164:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  172:22  error    Missing trailing comma                               comma-dangle
+  175:25  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+  178:65  error    Missing trailing comma                               comma-dangle
+  180:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  184:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  186:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  191:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  204:68  error    Missing trailing comma                               comma-dangle
+  206:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  207:11  warning  Unexpected console statement                         no-console
+  209:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  215:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  216:7   warning  Unexpected console statement                         no-console
+  217:19  error    Block must not be padded by blank lines              padded-blocks
+  218:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  220:7   warning  Unexpected console statement                         no-console
+  224:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  230:16  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+  231:24  error    Missing trailing comma                               comma-dangle
+  237:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  239:9   warning  Unexpected console statement                         no-console
+  242:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  250:45  error    Missing trailing comma                               comma-dangle
+  254:13  error    Unnecessarily quoted property 'Authorization' found  quote-props
+  256:64  error    Missing trailing comma                               comma-dangle
+  257:12  error    Missing trailing comma                               comma-dangle
+  258:10  error    Missing trailing comma                               comma-dangle
+  260:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  262:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  281:30  error    Missing trailing comma                               comma-dangle
+  283:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  284:9   warning  Unexpected console statement                         no-console
+  285:8   error    Block must not be padded by blank lines              padded-blocks
+  286:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  288:7   warning  Unexpected console statement                         no-console
+  291:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  303:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  306:22  error    Missing trailing comma                               comma-dangle
+  307:29  error    Block must not be padded by blank lines              padded-blocks
+  308:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  310:7   warning  Unexpected console statement                         no-console
+
+/home/user/workspace/functions/src/pushNotificationService.ts
+   15:18  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   21:10  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   32:1   error    Trailing spaces not allowed               no-trailing-spaces
+   34:9   warning  Unexpected console statement              no-console
+   37:1   error    Trailing spaces not allowed               no-trailing-spaces
+   46:24  error    Missing trailing comma                    comma-dangle
+   47:14  error    Missing trailing comma                    comma-dangle
+   51:43  error    Missing trailing comma                    comma-dangle
+   52:12  error    Missing trailing comma                    comma-dangle
+   57:43  error    Missing trailing comma                    comma-dangle
+   58:10  error    Missing trailing comma                    comma-dangle
+   60:1   error    Trailing spaces not allowed               no-trailing-spaces
+   62:1   error    Trailing spaces not allowed               no-trailing-spaces
+   63:7   warning  Unexpected console statement              no-console
+   64:1   error    Trailing spaces not allowed               no-trailing-spaces
+   69:1   error    Trailing spaces not allowed               no-trailing-spaces
+   70:40  error    Block must not be padded by blank lines   padded-blocks
+   71:1   error    Trailing spaces not allowed               no-trailing-spaces
+   73:7   warning  Unexpected console statement              no-console
+   77:1   error    Trailing spaces not allowed               no-trailing-spaces
+   84:1   error    Trailing spaces not allowed               no-trailing-spaces
+   86:9   warning  Unexpected console statement              no-console
+   89:1   error    Trailing spaces not allowed               no-trailing-spaces
+   94:34  error    Missing trailing comma                    comma-dangle
+   98:43  error    Missing trailing comma                    comma-dangle
+  105:40  error    Missing trailing comma                    comma-dangle
+  108:31  error    Missing trailing comma                    comma-dangle
+  109:14  error    Missing trailing comma                    comma-dangle
+  113:38  error    Missing trailing comma                    comma-dangle
+  114:12  error    Missing trailing comma                    comma-dangle
+  122:29  error    Missing trailing comma                    comma-dangle
+  123:12  error    Missing trailing comma                    comma-dangle
+  124:10  error    Missing trailing comma                    comma-dangle
+  126:1   error    Trailing spaces not allowed               no-trailing-spaces
+  128:1   error    Trailing spaces not allowed               no-trailing-spaces
+  129:7   warning  Unexpected console statement              no-console
+  130:1   error    Trailing spaces not allowed               no-trailing-spaces
+  135:1   error    Trailing spaces not allowed               no-trailing-spaces
+  136:40  error    Block must not be padded by blank lines   padded-blocks
+  137:1   error    Trailing spaces not allowed               no-trailing-spaces
+  139:7   warning  Unexpected console statement              no-console
+  143:1   error    Trailing spaces not allowed               no-trailing-spaces
+  150:1   error    Trailing spaces not allowed               no-trailing-spaces
+  154:1   error    Trailing spaces not allowed               no-trailing-spaces
+  157:1   error    Trailing spaces not allowed               no-trailing-spaces
+  159:74  error    Block must not be padded by blank lines   padded-blocks
+  160:1   error    Trailing spaces not allowed               no-trailing-spaces
+  162:7   warning  Unexpected console statement              no-console
+  166:1   error    Trailing spaces not allowed               no-trailing-spaces
+  173:46  error    Missing trailing comma                    comma-dangle
+  177:1   error    Trailing spaces not allowed               no-trailing-spaces
+  180:17  error    Use object destructuring                  prefer-destructuring
+  190:1   error    Trailing spaces not allowed               no-trailing-spaces
+  194:81  error    Missing trailing comma                    comma-dangle
+  196:1   error    Trailing spaces not allowed               no-trailing-spaces
+  197:9   warning  Unexpected console statement              no-console
+  200:7   warning  Unexpected console statement              no-console
+  203:1   error    Trailing spaces not allowed               no-trailing-spaces
+  211:72  error    Missing trailing comma                    comma-dangle
+  213:1   error    Trailing spaces not allowed               no-trailing-spaces
+  214:7   warning  Unexpected console statement              no-console
+  217:7   warning  Unexpected console statement              no-console
+  221:1   error    Trailing spaces not allowed               no-trailing-spaces
+  228:68  error    Missing trailing comma                    comma-dangle
+  230:1   error    Trailing spaces not allowed               no-trailing-spaces
+  231:7   warning  Unexpected console statement              no-console
+  234:7   warning  Unexpected console statement              no-console
+
+/home/user/workspace/functions/src/redditAuth.ts
+    7:13  error    'functions' is defined but never used                no-unused-vars
+    7:13  error    'functions' is defined but never used                @typescript-eslint/no-unused-vars
+   33:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   43:9   warning  Unexpected console statement                         no-console
+   46:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   54:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   56:9   warning  Unexpected console statement                         no-console
+   59:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   61:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   63:9   warning  Unexpected console statement                         no-console
+   66:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   69:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   71:9   warning  Unexpected console statement                         no-console
+   74:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   77:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   82:70  error    Missing trailing comma                               comma-dangle
+   84:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   85:23  error    Block must not be padded by blank lines              padded-blocks
+   86:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   88:7   warning  Unexpected console statement                         no-console
+   92:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   99:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  102:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  107:38  error    Missing trailing comma                               comma-dangle
+  111:13  error    Unnecessarily quoted property 'Authorization' found  quote-props
+  113:68  error    Missing trailing comma                               comma-dangle
+  114:12  error    Missing trailing comma                               comma-dangle
+  115:10  error    Missing trailing comma                               comma-dangle
+  117:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  122:53  error    Missing trailing comma                               comma-dangle
+  125:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  126:7   warning  Unexpected console statement                         no-console
+  127:19  error    Block must not be padded by blank lines              padded-blocks
+  128:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  130:7   warning  Unexpected console statement                         no-console
+  134:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  148:17  error    Missing trailing comma                               comma-dangle
+  150:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  151:7   warning  Unexpected console statement                         no-console
+  152:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  155:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  158:7   warning  Unexpected console statement                         no-console
+  162:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  175:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  178:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  179:7   warning  Unexpected console statement                         no-console
+  182:7   warning  Unexpected console statement                         no-console
+
+/home/user/workspace/functions/src/redditCommentScheduler.ts
+    9:28  error    A space is required before '}'                       object-curly-spacing
+   29:7   warning  Unexpected console statement                         no-console
+   30:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   37:47  error    Missing trailing comma                               comma-dangle
+   40:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   47:37  error    Missing trailing comma                               comma-dangle
+   50:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   53:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   65:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   67:9   warning  Unexpected console statement                         no-console
+   71:38  error    Missing trailing comma                               comma-dangle
+   74:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   77:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   83:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   85:9   warning  Unexpected console statement                         no-console
+   94:37  error    Missing trailing comma                               comma-dangle
+   97:1   error    Trailing spaces not allowed                          no-trailing-spaces
+   99:77  error    Block must not be padded by blank lines              padded-blocks
+  100:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  102:7   warning  Unexpected console statement                         no-console
+  106:72  error    Missing trailing comma                               comma-dangle
+  110:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  117:11  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+  118:18  warning  Unexpected any. Specify a different type             @typescript-eslint/no-explicit-any
+  118:21  error    Missing trailing comma                               comma-dangle
+  124:9   error    Unexpected string concatenation                      prefer-template
+  125:23  error    Missing trailing comma                               comma-dangle
+  127:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  133:15  error    Missing trailing comma                               comma-dangle
+  135:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  140:46  error    Missing trailing comma                               comma-dangle
+  143:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  148:32  error    Missing trailing comma                               comma-dangle
+  150:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  155:44  error    Missing trailing comma                               comma-dangle
+  158:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  174:67  error    Missing trailing comma                               comma-dangle
+  176:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  180:68  error    Missing trailing comma                               comma-dangle
+  182:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  196:46  error    Missing trailing comma                               comma-dangle
+  199:28  error    Missing trailing comma                               comma-dangle
+  200:10  error    Missing trailing comma                               comma-dangle
+  202:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  203:7   warning  Unexpected console statement                         no-console
+  204:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  211:44  error    Missing trailing comma                               comma-dangle
+  212:9   error    Block must not be padded by blank lines              padded-blocks
+  213:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  215:7   warning  Unexpected console statement                         no-console
+  219:72  error    Missing trailing comma                               comma-dangle
+  223:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  230:24  error    Missing trailing comma                               comma-dangle
+  235:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  241:35  error    Missing trailing comma                               comma-dangle
+  245:13  error    Unnecessarily quoted property 'Authorization' found  quote-props
+  247:64  error    Missing trailing comma                               comma-dangle
+  248:12  error    Missing trailing comma                               comma-dangle
+  249:10  error    Missing trailing comma                               comma-dangle
+  251:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  255:59  error    Missing trailing comma                               comma-dangle
+  258:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  262:18  error    Missing trailing comma                               comma-dangle
+  263:9   error    Block must not be padded by blank lines              padded-blocks
+  264:1   error    Trailing spaces not allowed                          no-trailing-spaces
+  266:7   warning  Unexpected console statement                         no-console
+  269:75  error    Missing trailing comma                               comma-dangle
+
+/home/user/workspace/functions/src/redditReplyMonitor.ts
+   31:39  error    'event' is defined but never used                                        no-unused-vars
+   31:39  error    'event' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+   31:46  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+   32:3   warning  Unexpected console statement                                             no-console
+   34:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   42:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   43:5   warning  Unexpected console statement                                             no-console
+   44:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   46:47  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+   54:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   57:69  error    Async arrow function has no 'await' expression                           require-await
+   59:9   error    Missing trailing comma                                                   comma-dangle
+   61:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   66:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   67:5   warning  Unexpected console statement                                             no-console
+   68:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   76:27  error    Missing trailing comma                                                   comma-dangle
+   78:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   81:5   warning  Unexpected console statement                                             no-console
+   82:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+   86:70  error    Missing trailing comma                                                   comma-dangle
+   88:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  101:7   warning  Unexpected console statement                                             no-console
+  104:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  110:34  error    Missing trailing comma                                                   comma-dangle
+  112:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  115:78  error    Missing trailing comma                                                   comma-dangle
+  117:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  123:9   warning  Unexpected console statement                                             no-console
+  127:5   warning  Unexpected console statement                                             no-console
+  137:22  error    Missing trailing comma                                                   comma-dangle
+  138:12  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+  141:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  146:11  error    Unnecessarily quoted property 'Authorization' found                      quote-props
+  147:66  error    Missing trailing comma                                                   comma-dangle
+  148:10  error    Missing trailing comma                                                   comma-dangle
+  149:8   error    Missing trailing comma                                                   comma-dangle
+  151:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  156:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  162:11  error    Unnecessarily quoted property 'Authorization' found                      quote-props
+  163:66  error    Missing trailing comma                                                   comma-dangle
+  164:10  error    Missing trailing comma                                                   comma-dangle
+  165:8   error    Missing trailing comma                                                   comma-dangle
+  167:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  170:31  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+  170:84  error    Block must not be padded by blank lines                                  padded-blocks
+  171:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  173:5   warning  Unexpected console statement                                             no-console
+  183:12  warning  Unexpected any. Specify a different type                                 @typescript-eslint/no-explicit-any
+  184:17  error    Missing trailing comma                                                   comma-dangle
+  187:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  192:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  193:3   warning  Unexpected console statement                                             no-console
+  194:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  199:29  error    Missing trailing comma                                                   comma-dangle
+  201:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  206:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  223:62  error    Missing trailing comma                                                   comma-dangle
+  225:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  228:70  error    Missing trailing comma                                                   comma-dangle
+  230:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  244:15  error    Missing trailing comma                                                   comma-dangle
+  248:26  error    Missing trailing comma                                                   comma-dangle
+  249:8   error    Missing trailing comma                                                   comma-dangle
+  256:23  error    Missing trailing comma                                                   comma-dangle
+  259:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  264:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  275:31  error    Missing trailing comma                                                   comma-dangle
+  276:6   error    Missing trailing comma                                                   comma-dangle
+  278:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  284:30  error    Missing trailing comma                                                   comma-dangle
+  286:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  289:76  error    Missing trailing comma                                                   comma-dangle
+  291:1   error    Trailing spaces not allowed                                              no-trailing-spaces
+  292:3   warning  Unexpected console statement                                             no-console
+
+/home/user/workspace/functions/src/taskQueue.ts
+   14:3   error    'REDDIT_COMMENT' is defined but never used                                 no-unused-vars
+   15:3   error    'REPLY_CHECK' is defined but never used                                    no-unused-vars
+   16:3   error    'KNOWLEDGE_GAP_ANALYSIS' is defined but never used                         no-unused-vars
+   17:3   error    'AGENT_TRAINING' is defined but never used                                 no-unused-vars
+   18:3   error    'NOTIFICATION_SEND' is defined but never used                              no-unused-vars
+   19:3   error    'CUSTOM' is defined but never used                                         no-unused-vars
+   23:3   error    'LOW' is defined but never used                                            no-unused-vars
+   24:3   error    'NORMAL' is defined but never used                                         no-unused-vars
+   25:3   error    'HIGH' is defined but never used                                           no-unused-vars
+   26:3   error    'URGENT' is defined but never used                                         no-unused-vars
+   30:3   error    'PENDING' is defined but never used                                        no-unused-vars
+   31:3   error    'RUNNING' is defined but never used                                        no-unused-vars
+   32:3   error    'COMPLETED' is defined but never used                                      no-unused-vars
+   33:3   error    'FAILED' is defined but never used                                         no-unused-vars
+   34:3   error    'CANCELLED' is defined but never used                                      no-unused-vars
+   35:3   error    'RETRY' is defined but never used                                          no-unused-vars
+   45:12  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+   63:20  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+   87:16  error    Missing trailing comma                                                     comma-dangle
+  103:5   warning  Unexpected console statement                                               no-console
+  122:5   warning  Unexpected console statement                                               no-console
+  124:61  error    Async arrow function has no 'await' expression                             require-await
+  141:76  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  148:51  error    Missing trailing comma                                                     comma-dangle
+  151:7   warning  Unexpected console statement                                               no-console
+  160:23  error    Missing trailing comma                                                     comma-dangle
+  163:7   warning  Unexpected console statement                                               no-console
+  164:58  error    Block must not be padded by blank lines                                    padded-blocks
+  167:7   warning  Unexpected console statement                                               no-console
+  173:74  error    Missing trailing comma                                                     comma-dangle
+  180:78  error    Missing trailing comma                                                     comma-dangle
+  183:9   warning  Unexpected console statement                                               no-console
+  184:60  error    Block must not be padded by blank lines                                    padded-blocks
+  191:78  error    Missing trailing comma                                                     comma-dangle
+  194:9   warning  Unexpected console statement                                               no-console
+  203:3   error    Async method 'executeTaskByType' has no 'await' expression                 require-await
+  203:66  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  225:69  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  228:7   warning  Forbidden non-null assertion                                               @typescript-eslint/no-non-null-assertion
+  229:7   warning  Forbidden non-null assertion                                               @typescript-eslint/no-non-null-assertion
+  229:22  error    Missing trailing comma                                                     comma-dangle
+  233:66  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  235:48  warning  Forbidden non-null assertion                                               @typescript-eslint/no-non-null-assertion
+  238:76  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  240:48  warning  Forbidden non-null assertion                                               @typescript-eslint/no-non-null-assertion
+  243:72  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  246:7   warning  Forbidden non-null assertion                                               @typescript-eslint/no-non-null-assertion
+  247:19  error    Missing trailing comma                                                     comma-dangle
+  251:3   error    Async method 'executeCustomTask' has no 'await' expression                 require-await
+  251:66  warning  Unexpected any. Specify a different type                                   @typescript-eslint/no-explicit-any
+  254:5   warning  Unexpected console statement                                               no-console
+  275:51  error    Missing trailing comma                                                     comma-dangle
+  277:5   warning  Unexpected console statement                                               no-console
+  326:49  error    Missing trailing comma                                                     comma-dangle
+  335:51  error    Missing trailing comma                                                     comma-dangle
+  350:5   warning  Unexpected console statement                                               no-console
+  365:20  error    Missing trailing comma                                                     comma-dangle
+  369:17  error    'context' is defined but never used                                        no-unused-vars
+  369:17  error    'context' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  370:5   warning  Unexpected console statement                                               no-console
+  381:20  error    Missing trailing comma                                                     comma-dangle
+  385:17  error    'context' is defined but never used                                        no-unused-vars
+  385:17  error    'context' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+  386:5   warning  Unexpected console statement                                               no-console
+
+✖ 667 problems (476 errors, 191 warnings)
+  415 errors and 0 warnings potentially fixable with the `--fix` option.
+

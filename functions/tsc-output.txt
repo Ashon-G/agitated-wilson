@@ -1,0 +1,33 @@
+src/aiCommentGenerator.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/aiCommentGenerator.ts(7,28): error TS2307: Cannot find module 'firebase-functions' or its corresponding type declarations.
+src/aiCommentGenerator.ts(109,35): error TS2307: Cannot find module 'axios' or its corresponding type declarations.
+src/aiProxy.ts(6,36): error TS2307: Cannot find module 'firebase-functions/v2/https' or its corresponding type declarations.
+src/autonomousAgentOrchestrator.ts(8,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/autonomousRedditAgent.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/dialogflowCXManager.ts(10,36): error TS2307: Cannot find module 'firebase-functions/v2/https' or its corresponding type declarations.
+src/dialogflowCXManager.ts(11,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/dialogflowCXManager.ts(13,30): error TS2307: Cannot find module 'firebase-functions/params' or its corresponding type declarations.
+src/dialogflowCXManager.ts(57,14): error TS2503: Cannot find namespace 'FirebaseFirestore'.
+src/dialogflowCXManager.ts(58,14): error TS2503: Cannot find namespace 'FirebaseFirestore'.
+src/dialogflowCXManager.ts(62,24): error TS2503: Cannot find namespace 'FirebaseFirestore'.
+src/dialogflowCXManager.ts(71,15): error TS2503: Cannot find namespace 'FirebaseFirestore'.
+src/dialogflowCXSession.ts(10,36): error TS2307: Cannot find module 'firebase-functions/v2/https' or its corresponding type declarations.
+src/dialogflowCXSession.ts(11,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/dialogflowCXSession.ts(13,30): error TS2307: Cannot find module 'firebase-functions/params' or its corresponding type declarations.
+src/index.ts(7,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/index.ts(8,28): error TS2307: Cannot find module 'firebase-functions' or its corresponding type declarations.
+src/knowledgeBaseQuery.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/knowledgeGapDetector.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/knowledgeGapDetector.ts(244,35): error TS2307: Cannot find module 'axios' or its corresponding type declarations.
+src/pushNotificationService.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/redditAuth.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/redditAuth.ts(7,28): error TS2307: Cannot find module 'firebase-functions' or its corresponding type declarations.
+src/redditAuth.ts(98,35): error TS2307: Cannot find module 'axios' or its corresponding type declarations.
+src/redditCommentScheduler.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/redditCommentScheduler.ts(234,35): error TS2307: Cannot find module 'axios' or its corresponding type declarations.
+src/redditReplyMonitor.ts(6,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/redditReplyMonitor.ts(140,33): error TS2307: Cannot find module 'axios' or its corresponding type declarations.
+src/taskQueue.ts(8,24): error TS2307: Cannot find module 'firebase-admin' or its corresponding type declarations.
+src/taskQueue.ts(9,28): error TS2307: Cannot find module 'firebase-functions' or its corresponding type declarations.
+src/taskQueue.ts(234,13): error TS2339: Property 'redditReplyMonitor' does not exist on type 'typeof import("/home/user/workspace/functions/src/redditReplyMonitor")'.
+src/taskQueue.ts(240,33): error TS2339: Property 'analyzeSession' does not exist on type 'KnowledgeGapDetector'.
